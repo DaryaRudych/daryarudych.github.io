@@ -1,0 +1,129 @@
+
+@import url("https://fonts.googleapis.com/css?family=Lato:400,700,400italic");
+:root {
+  --blue: #2C3E50;
+  --indigo: #6610f2;
+  --purple: #6f42c1;
+  --pink: #e83e8c;
+  --red: #E74C3C;
+  --orange: #fd7e14;
+  --yellow: #F39C12;
+  --green: #18BC9C;
+  --teal: #20c997;
+  --cyan: #3498DB;
+  --white: #fff;
+  --gray: #95a5a6;
+  --gray-dark: #343a40;
+  --primary: #2C3E50;
+  --secondary: #95a5a6;
+  --success: #18BC9C;
+  --info: #3498DB;
+  --warning: #F39C12;
+  --danger: #E74C3C;
+  --light: #ecf0f1;
+  --dark: #7b8a8b;
+  --breakpoint-xs: 0;
+  --breakpoint-sm: 576px;
+  --breakpoint-md: 768px;
+  --breakpoint-lg: 992px;
+  --breakpoint-xl: 1200px;
+  --font-family-sans-serif: "Lato", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  --font-family-monospace: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+}
+.navbar {
+    background-color:skyblue;
+    padding-bottom: 5px;
+    padding-top: 5px;
+}
+
+.navbar a {
+    font-size: 1.2em !important;
+    height: 5%;
+
+}
+.jumbotron {
+    padding-left: 1.5em;
+    padding-right: 1.5em;
+    font-size: 6pc;
+    margin-bottom:0;
+}
+/* Title */ 
+.navbar .navbar-brand {
+    color: #000080;
+    font-size: 1.4em;
+    font-weight: bold;
+}
+.navbar-default .navbar-brand:hover,
+.navbar-default .navbar-brand:focus {
+    color: #5E5E5E;
+}
+/* Link */
+.navbar-default .navbar-nav > li > a {
+    color: #777;
+}
+.navbar-default .navbar-nav > li > a:hover,
+.navbar-default .navbar-nav > li > a:focus {
+    color: #333;
+}
+.navbar-default .navbar-nav > .active > a,
+.navbar-default .navbar-nav > .active > a:hover,
+.navbar-default .navbar-nav > .active > a:focus {
+    color: #555;
+    background-color: #E7E7E7;
+}
+
+h2 {
+    color: rgb(54, 57, 179);
+}
+.page-header {
+    margin: 6px;
+    padding: 6px;
+}
+.table-responsive {
+    overflow-x: auto;
+    overflow-y: auto;
+    margin-bottom: 20px;
+    margin-left: 30px;
+    margin-right: 30px;
+    width: 100%;
+    margin-bottom: 15px;
+    overflow-x: auto;
+    overflow-y: hidden;
+    -webkit-overflow-scrolling: touch;
+    -ms-overflow-style: -ms-autohiding-scrollbar;
+    border: 1px solid #DDD;
+}
+.body {
+    margin-right: 30px;
+    margin-left: 30px;
+    background-color: #D5D5D5;
+}
+.navbar-nav{
+    margin-bottom:0;
+    padding-left: 1%;
+}
+p {
+    font-optical-sizing: 180%;
+}
+.container-fluid{
+    font-size: 110%;
+    color:rgb(88, 83, 83);
+    padding-bottom: 2%;
+    padding-top: 2%;
+    padding-left: 1%;
+    padding-right: 1%;
+    margin-right: 0%;
+}
+.container-sub{
+    padding-top: 10%;
+    margin-top: 5%;
+}
+.footer{
+    padding-top: 2%;
+    padding-left: 2%;
+}
+.column-md-6{
+    margin-left: 5%;
+    margin-right: 5%;
+
+}

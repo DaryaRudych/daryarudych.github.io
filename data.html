@@ -1,0 +1,1138 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>EagleFord Analysis</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+  <link rel="stylesheet" href="test.css">
+</head>
+
+
+
+<body>
+    <nav class="navbar navbar-expand-xl navbar-dark bg-dark">
+        <div class="container-fluid">
+            <div class="navbar-header"> 
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                <span class="navbar-toggler-icon"></span>
+                </button>
+                <a class="navbar-brand" href="landing.html">Eagle Ford Project</a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbarColor02">
+                <ul class="nav navbar-nav navbar-right">
+                    <li class="active"><a href="data.html">Data<span class="sr-only">(current)</span></a></li>
+                    <li class="dropdown">
+                    <a href="Plot1.html" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Plots<span class="caret"></span></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="Plot1.html">Activity By Sub-Play</a></li>
+                        <li><a href="Plot2.html">Production By Year</a></li>
+                        <li><a href="Plot3.html">Average Recovery</a></li>
+                        <li><a href="Plot4.html">Cost Breakdown</a></li>
+                    </ul>
+                    <li><a href="Comparison.html">Comparison</a></li>
+                </ul>
+                <form class="navbar-form navbar-left" action="/action_page.php">
+                    <div class="form-group">
+                        <input type="text" class="form-control" placeholder="Search">
+                    </div>
+                    <button type="submit" class="btn btn-default">Submit</button>
+                </form>
+            </div>
+        </div>
+    </nav>
+    <div class="page-header">
+        <h2>Data</h2>
+        <p><h3> The following page includes all of the data used for plotting during this project</h3></p>
+    </div>
+    <div class="table-responsive">
+        <table class = "table table-striped">
+                <thead><tr><th title="Field #1">API</th>
+                    <th title="Field #2">Longitude</th>
+                    <th title="Field #3">Latitude</th>
+                    <th title="Field #4">Well Type</th>
+                    <th title="Field #5">Operator</th>
+                    <th title="Field #6">Operator (Original)</th>
+                    <th title="Field #7">Sub-play</th>
+                    <th title="Field #8">County</th>
+                    <th title="Field #9">First Production Date</th>
+                    <th title="Field #10">Vertical Depth (m)</th>
+                    <th title="Field #11">Measured Depth (m)</th>
+                    <th title="Field #12">Lateral Length (m)</th>
+                    <th title="Field #13">Drilling Days (days)</th>
+                    <th title="Field #14">Drilling Speed (m/day)</th>
+                    <th title="Field #15">Proppant (kg)</th>
+                    <th title="Field #16">API Gravity (degree)</th>
+                    <th title="Field #17">Well Cost Total (US$)</th>
+                    <th title="Field #18">Rig Cost (US$)</th>
+                    <th title="Field #19">Casing Cost (US$)</th>
+                    <th title="Field #20">Water Cost (US$)</th>
+                    <th title="Field #21">Proppant Cost (US$)</th>
+                    <th title="Field #22">Pumping Cost (US$)</th>
+                    <th title="Field #23">Other Cost (US$)</th>
+                    <th title="Field #24">Cum180 Oil (bbl)</th>
+                    <th title="Field #25">Cum365 Oil (bbl)</th>
+                    <th title="Field #26">Cum180 Gas (mcf)</th>
+                    <th title="Field #27">Cum365 Gas (mcf)</th>
+                    <th title="Field #28">Cum365 Total (boe)</th>
+                    <th title="Field #29">IP Oil (b/d)</th>
+                    <th title="Field #30">IP Gas (mmcfd)</th>
+                    <th title="Field #31">IP Total (boe/d)</th>
+                    <th title="Field #32">EUR Oil (mmbbl)</th>
+                    <th title="Field #33">EUR Gas (bcf)</th>
+                    <th title="Field #34">EUR Total (mmboe)</th>
+                    </tr></thead>
+                    <tbody><tr>
+                    <td align="right">42013342710000</td>
+                    <td align="right">-98.33284714</td>
+                    <td align="right">28.95400189</td>
+                    <td>Oil</td>
+                    <td>EOG Resources</td>
+                    <td>Chaparral Natural Resources</td>
+                    <td>Black Oil</td>
+                    <td>Atascosa</td>
+                    <td>2010-01-12</td>
+                    <td align="right">2579.5975344452504</td>
+                    <td align="right">4525.017705554208</td>
+                    <td align="right">1865.967140755272</td>
+                    <td align="right">20.81810035842294</td>
+                    <td align="right">271.3560460939839</td>
+                    <td align="right">3884822.8545508627</td>
+                    <td align="right">38.13687531677655</td>
+                    <td align="right">6616557.044128646</td>
+                    <td align="right">571394.653951633</td>
+                    <td align="right">262710.1934679631</td>
+                    <td align="right">623498.452754924</td>
+                    <td align="right">516538.8534031414</td>
+                    <td align="right">1532267.7980553478</td>
+                    <td align="right">3110147.102218898</td>
+                    <td align="right">10871.0</td>
+                    <td align="right">17850.0</td>
+                    <td align="right">6103.0</td>
+                    <td align="right">10510.0</td>
+                    <td align="right">19700.0</td>
+                    <td align="right">83.5</td>
+                    <td align="right">0.04</td>
+                    <td align="right">89.77</td>
+                    <td align="right">0.082</td>
+                    <td align="right">0.043</td>
+                    <td align="right">0.09</td>
+                    </tr>
+                    <tr>
+                    <td align="right">42013342730000</td>
+                    <td align="right">-98.45566218</td>
+                    <td align="right">28.72858401</td>
+                    <td>Oil</td>
+                    <td>EOG Resources</td>
+                    <td>EOG Resources</td>
+                    <td>Black Oil</td>
+                    <td>Atascosa</td>
+                    <td>2010-01-12</td>
+                    <td align="right">2579.5975344452504</td>
+                    <td align="right">4525.017705554208</td>
+                    <td align="right">1865.967140755272</td>
+                    <td align="right">26.0</td>
+                    <td align="right">271.3560460939839</td>
+                    <td align="right">3884822.8545508627</td>
+                    <td align="right">38.13687531677655</td>
+                    <td align="right">6616557.044128646</td>
+                    <td align="right">571394.653951633</td>
+                    <td align="right">262710.1934679631</td>
+                    <td align="right">623498.452754924</td>
+                    <td align="right">516538.8534031414</td>
+                    <td align="right">1532267.7980553478</td>
+                    <td align="right">3110147.102218898</td>
+                    <td align="right">6306.0</td>
+                    <td align="right">10853.0</td>
+                    <td align="right">9439.0</td>
+                    <td align="right">16553.0</td>
+                    <td align="right">13766.0</td>
+                    <td align="right">42.34</td>
+                    <td align="right">0.13</td>
+                    <td align="right">64.09</td>
+                    <td align="right">0.053</td>
+                    <td align="right">0.156</td>
+                    <td align="right">0.081</td>
+                    </tr>
+                    <tr>
+                    <td align="right">42013342780000</td>
+                    <td align="right">-98.47061893</td>
+                    <td align="right">28.69882961</td>
+                    <td>Oil</td>
+                    <td>Dewbre Petroleum Corporation</td>
+                    <td>Dewbre Petroleum Corporation</td>
+                    <td>Black Oil</td>
+                    <td>Atascosa</td>
+                    <td>2011-01-03</td>
+                    <td align="right">2975.0</td>
+                    <td align="right">4154.0</td>
+                    <td align="right">1120.0</td>
+                    <td align="right">29.0</td>
+                    <td align="right">143.26</td>
+                    <td align="right">3884822.8545508627</td>
+                    <td align="right">37.5</td>
+                    <td align="right">6616557.044128646</td>
+                    <td align="right">571394.653951633</td>
+                    <td align="right">262710.1934679631</td>
+                    <td align="right">623498.452754924</td>
+                    <td align="right">516538.8534031414</td>
+                    <td align="right">1532267.7980553478</td>
+                    <td align="right">3110147.102218898</td>
+                    <td align="right">28938.0</td>
+                    <td align="right">42766.0</td>
+                    <td align="right">17618.0</td>
+                    <td align="right">19941.0</td>
+                    <td align="right">46276.0</td>
+                    <td align="right">276.45</td>
+                    <td align="right">0.16</td>
+                    <td align="right">287.4</td>
+                    <td align="right">0.172</td>
+                    <td align="right">0.12</td>
+                    <td align="right">0.193</td>
+                    </tr>
+                    <tr>
+                    <td align="right">42013342790000</td>
+                    <td align="right">-98.45031912</td>
+                    <td align="right">28.72642065</td>
+                    <td>Oil</td>
+                    <td>EOG Resources</td>
+                    <td>EOG Resources</td>
+                    <td>Black Oil</td>
+                    <td>Atascosa</td>
+                    <td>2010-01-12</td>
+                    <td align="right">2944.0</td>
+                    <td align="right">4328.0</td>
+                    <td align="right">1314.0</td>
+                    <td align="right">47.0</td>
+                    <td align="right">92.08</td>
+                    <td align="right">3884822.8545508627</td>
+                    <td align="right">36.7</td>
+                    <td align="right">6616557.044128646</td>
+                    <td align="right">571394.653951633</td>
+                    <td align="right">262710.1934679631</td>
+                    <td align="right">623498.452754924</td>
+                    <td align="right">516538.8534031414</td>
+                    <td align="right">1532267.7980553478</td>
+                    <td align="right">3110147.102218898</td>
+                    <td align="right">6306.0</td>
+                    <td align="right">10853.0</td>
+                    <td align="right">9439.0</td>
+                    <td align="right">16553.0</td>
+                    <td align="right">13766.0</td>
+                    <td align="right">42.34</td>
+                    <td align="right">0.13</td>
+                    <td align="right">64.09</td>
+                    <td align="right">0.053</td>
+                    <td align="right">0.156</td>
+                    <td align="right">0.081</td>
+                    </tr>
+                    <tr>
+                    <td align="right">42013342850000</td>
+                    <td align="right">-98.43968605</td>
+                    <td align="right">28.73465251</td>
+                    <td>Oil</td>
+                    <td>EOG Resources</td>
+                    <td>EOG Resources</td>
+                    <td>Black Oil</td>
+                    <td>Atascosa</td>
+                    <td>2010-01-12</td>
+                    <td align="right">2579.5975344452504</td>
+                    <td align="right">4525.017705554208</td>
+                    <td align="right">1865.967140755272</td>
+                    <td align="right">20.81810035842294</td>
+                    <td align="right">271.3560460939839</td>
+                    <td align="right">3884822.8545508627</td>
+                    <td align="right">38.13687531677655</td>
+                    <td align="right">6616557.044128646</td>
+                    <td align="right">571394.653951633</td>
+                    <td align="right">262710.1934679631</td>
+                    <td align="right">623498.452754924</td>
+                    <td align="right">516538.8534031414</td>
+                    <td align="right">1532267.7980553478</td>
+                    <td align="right">3110147.102218898</td>
+                    <td align="right">17067.0</td>
+                    <td align="right">25943.0</td>
+                    <td align="right">17487.0</td>
+                    <td align="right">25416.0</td>
+                    <td align="right">30416.0</td>
+                    <td align="right">127.35</td>
+                    <td align="right">0.17</td>
+                    <td align="right">139.48</td>
+                    <td align="right">0.105</td>
+                    <td align="right">0.119</td>
+                    <td align="right">0.125</td>
+                    </tr>
+                    <tr>
+                    <td align="right">42013342890000</td>
+                    <td align="right">-98.50351879</td>
+                    <td align="right">28.71283531</td>
+                    <td>Oil</td>
+                    <td>EOG Resources</td>
+                    <td>EOG Resources</td>
+                    <td>Black Oil</td>
+                    <td>Atascosa</td>
+                    <td>2010-01-12</td>
+                    <td align="right">2882.0</td>
+                    <td align="right">4173.0</td>
+                    <td align="right">1226.0</td>
+                    <td align="right">20.81810035842294</td>
+                    <td align="right">271.3560460939839</td>
+                    <td align="right">3884822.8545508627</td>
+                    <td align="right">38.13687531677655</td>
+                    <td align="right">6616557.044128646</td>
+                    <td align="right">571394.653951633</td>
+                    <td align="right">262710.1934679631</td>
+                    <td align="right">623498.452754924</td>
+                    <td align="right">516538.8534031414</td>
+                    <td align="right">1532267.7980553478</td>
+                    <td align="right">3110147.102218898</td>
+                    <td align="right">15328.0</td>
+                    <td align="right">22870.0</td>
+                    <td align="right">12093.0</td>
+                    <td align="right">19686.0</td>
+                    <td align="right">26335.0</td>
+                    <td align="right">128.46</td>
+                    <td align="right">0.14</td>
+                    <td align="right">145.84</td>
+                    <td align="right">0.092</td>
+                    <td align="right">0.118</td>
+                    <td align="right">0.113</td>
+                    </tr>
+                    <tr>
+                    <td align="right">42013342900000</td>
+                    <td align="right">-98.44322923</td>
+                    <td align="right">28.73062852</td>
+                    <td>Oil</td>
+                    <td>EOG Resources</td>
+                    <td>EOG Resources</td>
+                    <td>Black Oil</td>
+                    <td>Atascosa</td>
+                    <td>2010-01-12</td>
+                    <td align="right">2579.5975344452504</td>
+                    <td align="right">4525.017705554208</td>
+                    <td align="right">1865.967140755272</td>
+                    <td align="right">20.81810035842294</td>
+                    <td align="right">271.3560460939839</td>
+                    <td align="right">3884822.8545508627</td>
+                    <td align="right">38.13687531677655</td>
+                    <td align="right">6616557.044128646</td>
+                    <td align="right">571394.653951633</td>
+                    <td align="right">262710.1934679631</td>
+                    <td align="right">623498.452754924</td>
+                    <td align="right">516538.8534031414</td>
+                    <td align="right">1532267.7980553478</td>
+                    <td align="right">3110147.102218898</td>
+                    <td align="right">17067.0</td>
+                    <td align="right">25943.0</td>
+                    <td align="right">17487.0</td>
+                    <td align="right">25416.0</td>
+                    <td align="right">30416.0</td>
+                    <td align="right">127.35</td>
+                    <td align="right">0.17</td>
+                    <td align="right">139.48</td>
+                    <td align="right">0.105</td>
+                    <td align="right">0.119</td>
+                    <td align="right">0.125</td>
+                    </tr>
+                    <tr>
+                    <td align="right">42013342910000</td>
+                    <td align="right">-98.16713315</td>
+                    <td align="right">28.78962733</td>
+                    <td>Oil</td>
+                    <td>ExxonMobil</td>
+                    <td>XTO Energy</td>
+                    <td>Karnes Trough</td>
+                    <td>Atascosa</td>
+                    <td>2010-01-10</td>
+                    <td align="right">3338.0</td>
+                    <td align="right">5182.0</td>
+                    <td align="right">1752.0</td>
+                    <td align="right">44.0</td>
+                    <td align="right">117.76</td>
+                    <td align="right">3440131.436915134</td>
+                    <td align="right">40.93</td>
+                    <td align="right">7205512.000285551</td>
+                    <td align="right">649498.1319246145</td>
+                    <td align="right">312655.5982295831</td>
+                    <td align="right">570710.5422615649</td>
+                    <td align="right">536350.4368932039</td>
+                    <td align="right">1613376.3583666477</td>
+                    <td align="right">3522920.9440319818</td>
+                    <td align="right">4834.0</td>
+                    <td align="right">4834.0</td>
+                    <td align="right">2107.0</td>
+                    <td align="right">2107.0</td>
+                    <td align="right">5205.0</td>
+                    <td align="right">793.73</td>
+                    <td align="right">0.36</td>
+                    <td align="right">843.11</td>
+                    <td align="right">0.482</td>
+                    <td align="right">0.523</td>
+                    <td align="right">0.571</td>
+                    </tr>
+                    <tr>
+                    <td align="right">42013343040000</td>
+                    <td align="right">-98.34242116</td>
+                    <td align="right">28.95262129</td>
+                    <td>Oil</td>
+                    <td>EOG Resources</td>
+                    <td>EOG Resources</td>
+                    <td>Black Oil</td>
+                    <td>Atascosa</td>
+                    <td>2010-01-12</td>
+                    <td align="right">2579.5975344452504</td>
+                    <td align="right">4525.017705554208</td>
+                    <td align="right">1865.967140755272</td>
+                    <td align="right">19.0</td>
+                    <td align="right">271.3560460939839</td>
+                    <td align="right">3884822.8545508627</td>
+                    <td align="right">38.13687531677655</td>
+                    <td align="right">6616557.044128646</td>
+                    <td align="right">571394.653951633</td>
+                    <td align="right">262710.1934679631</td>
+                    <td align="right">623498.452754924</td>
+                    <td align="right">516538.8534031414</td>
+                    <td align="right">1532267.7980553478</td>
+                    <td align="right">3110147.102218898</td>
+                    <td align="right">10871.0</td>
+                    <td align="right">17850.0</td>
+                    <td align="right">6103.0</td>
+                    <td align="right">10510.0</td>
+                    <td align="right">19700.0</td>
+                    <td align="right">83.5</td>
+                    <td align="right">0.04</td>
+                    <td align="right">89.77</td>
+                    <td align="right">0.082</td>
+                    <td align="right">0.043</td>
+                    <td align="right">0.09</td>
+                    </tr>
+                    <tr>
+                    <td align="right">42013343060000</td>
+                    <td align="right">-98.15415634</td>
+                    <td align="right">28.77682307</td>
+                    <td>Oil</td>
+                    <td>Marathon Oil</td>
+                    <td>Hilcorp Energy</td>
+                    <td>Karnes Trough</td>
+                    <td>Atascosa</td>
+                    <td>2010-01-12</td>
+                    <td align="right">3234.0</td>
+                    <td align="right">4812.0</td>
+                    <td align="right">1499.0</td>
+                    <td align="right">22.0</td>
+                    <td align="right">218.71</td>
+                    <td align="right">3440131.436915134</td>
+                    <td align="right">45.067479279794256</td>
+                    <td align="right">7205512.000285551</td>
+                    <td align="right">649498.1319246145</td>
+                    <td align="right">312655.5982295831</td>
+                    <td align="right">570710.5422615649</td>
+                    <td align="right">536350.4368932039</td>
+                    <td align="right">1613376.3583666477</td>
+                    <td align="right">3522920.9440319818</td>
+                    <td align="right">25409.0</td>
+                    <td align="right">38713.0</td>
+                    <td align="right">16303.0</td>
+                    <td align="right">20219.0</td>
+                    <td align="right">42272.0</td>
+                    <td align="right">196.74</td>
+                    <td align="right">0.16</td>
+                    <td align="right">225.67</td>
+                    <td align="right">0.173</td>
+                    <td align="right">0.178</td>
+                    <td align="right">0.205</td>
+                    </tr>
+                    <tr>
+                    <td align="right">42013343080000</td>
+                    <td align="right">-98.18037049</td>
+                    <td align="right">28.75726688</td>
+                    <td>Oil</td>
+                    <td>Hilcorp Energy</td>
+                    <td>Hilcorp Energy</td>
+                    <td>Karnes Trough</td>
+                    <td>Atascosa</td>
+                    <td>2010-01-12</td>
+                    <td align="right">3227.0</td>
+                    <td align="right">4839.0</td>
+                    <td align="right">1532.0</td>
+                    <td align="right">16.0</td>
+                    <td align="right">302.44</td>
+                    <td align="right">3440131.436915134</td>
+                    <td align="right">43.2</td>
+                    <td align="right">7205512.000285551</td>
+                    <td align="right">649498.1319246145</td>
+                    <td align="right">312655.5982295831</td>
+                    <td align="right">570710.5422615649</td>
+                    <td align="right">536350.4368932039</td>
+                    <td align="right">1613376.3583666477</td>
+                    <td align="right">3522920.9440319818</td>
+                    <td align="right">37608.0</td>
+                    <td align="right">53727.0</td>
+                    <td align="right">34847.0</td>
+                    <td align="right">43420.0</td>
+                    <td align="right">61369.0</td>
+                    <td align="right">367.94</td>
+                    <td align="right">0.29</td>
+                    <td align="right">419.0</td>
+                    <td align="right">0.187</td>
+                    <td align="right">0.154</td>
+                    <td align="right">0.214</td>
+                    </tr>
+                    <tr>
+                    <td align="right">42013343110000</td>
+                    <td align="right">-98.66917119</td>
+                    <td align="right">28.72634951</td>
+                    <td>Oil</td>
+                    <td>Sharon Hunter Resources</td>
+                    <td>Sharon Resources</td>
+                    <td>Black Oil</td>
+                    <td>Atascosa</td>
+                    <td>2010-01-12</td>
+                    <td align="right">2579.5975344452504</td>
+                    <td align="right">3982.0</td>
+                    <td align="right">1865.967140755272</td>
+                    <td align="right">26.0</td>
+                    <td align="right">153.16</td>
+                    <td align="right">3884822.8545508627</td>
+                    <td align="right">27.8</td>
+                    <td align="right">6616557.044128646</td>
+                    <td align="right">571394.653951633</td>
+                    <td align="right">262710.1934679631</td>
+                    <td align="right">623498.452754924</td>
+                    <td align="right">516538.8534031414</td>
+                    <td align="right">1532267.7980553478</td>
+                    <td align="right">3110147.102218898</td>
+                    <td align="right">18301.0</td>
+                    <td align="right">28435.0</td>
+                    <td align="right">11925.0</td>
+                    <td align="right">23661.0</td>
+                    <td align="right">32599.0</td>
+                    <td align="right">145.45</td>
+                    <td align="right">0.11</td>
+                    <td align="right">156.79</td>
+                    <td align="right">0.078</td>
+                    <td align="right">0.133</td>
+                    <td align="right">0.101</td>
+                    </tr>
+                    <tr>
+                    <td align="right">42013343140000</td>
+                    <td align="right">-98.62961216</td>
+                    <td align="right">28.72671259</td>
+                    <td>Oil</td>
+                    <td>Comstock Resources</td>
+                    <td>Comstock Resources</td>
+                    <td>Black Oil</td>
+                    <td>Atascosa</td>
+                    <td>2010-01-11</td>
+                    <td align="right">2649.0</td>
+                    <td align="right">4241.0</td>
+                    <td align="right">1512.0</td>
+                    <td align="right">49.0</td>
+                    <td align="right">86.54</td>
+                    <td align="right">3884822.8545508627</td>
+                    <td align="right">32.0</td>
+                    <td align="right">6616557.044128646</td>
+                    <td align="right">571394.653951633</td>
+                    <td align="right">262710.1934679631</td>
+                    <td align="right">623498.452754924</td>
+                    <td align="right">516538.8534031414</td>
+                    <td align="right">1532267.7980553478</td>
+                    <td align="right">3110147.102218898</td>
+                    <td align="right">38174.0</td>
+                    <td align="right">60806.0</td>
+                    <td align="right">25130.0</td>
+                    <td align="right">39400.0</td>
+                    <td align="right">67740.0</td>
+                    <td align="right">266.71</td>
+                    <td align="right">0.19</td>
+                    <td align="right">299.74</td>
+                    <td align="right">0.219</td>
+                    <td align="right">0.172</td>
+                    <td align="right">0.249</td>
+                    </tr>
+                    <tr>
+                    <td align="right">42013343150000</td>
+                    <td align="right">-98.66783776</td>
+                    <td align="right">28.72933092</td>
+                    <td>Oil</td>
+                    <td>PetroEdge Energy</td>
+                    <td>Sharon Resources</td>
+                    <td>Black Oil</td>
+                    <td>Atascosa</td>
+                    <td>2010-01-12</td>
+                    <td align="right">2582.0</td>
+                    <td align="right">3834.0</td>
+                    <td align="right">1190.0</td>
+                    <td align="right">21.0</td>
+                    <td align="right">182.59</td>
+                    <td align="right">3884822.8545508627</td>
+                    <td align="right">32.4</td>
+                    <td align="right">6616557.044128646</td>
+                    <td align="right">571394.653951633</td>
+                    <td align="right">262710.1934679631</td>
+                    <td align="right">623498.452754924</td>
+                    <td align="right">516538.8534031414</td>
+                    <td align="right">1532267.7980553478</td>
+                    <td align="right">3110147.102218898</td>
+                    <td align="right">18301.0</td>
+                    <td align="right">28435.0</td>
+                    <td align="right">11925.0</td>
+                    <td align="right">23661.0</td>
+                    <td align="right">32599.0</td>
+                    <td align="right">145.45</td>
+                    <td align="right">0.11</td>
+                    <td align="right">156.79</td>
+                    <td align="right">0.078</td>
+                    <td align="right">0.133</td>
+                    <td align="right">0.101</td>
+                    </tr>
+                    <tr>
+                    <td align="right">42013343160000</td>
+                    <td align="right">-98.4706285</td>
+                    <td align="right">28.67909045</td>
+                    <td>Oil</td>
+                    <td>EOG Resources</td>
+                    <td>EOG Resources</td>
+                    <td>Black Oil</td>
+                    <td>Atascosa</td>
+                    <td>2013-01-03</td>
+                    <td align="right">3108.0</td>
+                    <td align="right">4465.0</td>
+                    <td align="right">1288.0</td>
+                    <td align="right">9.0</td>
+                    <td align="right">496.08</td>
+                    <td align="right">3884822.8545508627</td>
+                    <td align="right">37.0</td>
+                    <td align="right">6616557.044128646</td>
+                    <td align="right">571394.653951633</td>
+                    <td align="right">262710.1934679631</td>
+                    <td align="right">623498.452754924</td>
+                    <td align="right">516538.8534031414</td>
+                    <td align="right">1532267.7980553478</td>
+                    <td align="right">3110147.102218898</td>
+                    <td align="right">0.0</td>
+                    <td align="right">0.0</td>
+                    <td align="right">1534.0</td>
+                    <td align="right">2413.0</td>
+                    <td align="right">425.0</td>
+                    <td align="right">435.9655626692919</td>
+                    <td align="right">0.53</td>
+                    <td align="right">1.85</td>
+                    <td align="right">0.23605575087895536</td>
+                    <td align="right">0.41551177354709445</td>
+                    <td align="right">0.3035410821643285</td>
+                    </tr>
+                    <tr>
+                    <td align="right">42013343180000</td>
+                    <td align="right">-98.29229922</td>
+                    <td align="right">28.68575526</td>
+                    <td>Oil</td>
+                    <td>Teal Operating</td>
+                    <td>Cinco Resources</td>
+                    <td>Karnes Trough</td>
+                    <td>Atascosa</td>
+                    <td>2011-01-02</td>
+                    <td align="right">3363.0</td>
+                    <td align="right">4677.0</td>
+                    <td align="right">1249.0</td>
+                    <td align="right">35.0</td>
+                    <td align="right">133.63</td>
+                    <td align="right">3440131.436915134</td>
+                    <td align="right">40.8</td>
+                    <td align="right">7205512.000285551</td>
+                    <td align="right">649498.1319246145</td>
+                    <td align="right">312655.5982295831</td>
+                    <td align="right">570710.5422615649</td>
+                    <td align="right">536350.4368932039</td>
+                    <td align="right">1613376.3583666477</td>
+                    <td align="right">3522920.9440319818</td>
+                    <td align="right">2254.0</td>
+                    <td align="right">5469.0</td>
+                    <td align="right">1140.0</td>
+                    <td align="right">4577.0</td>
+                    <td align="right">6275.0</td>
+                    <td align="right">80.5</td>
+                    <td align="right">0.09</td>
+                    <td align="right">87.67</td>
+                    <td align="right">0.034</td>
+                    <td align="right">0.044</td>
+                    <td align="right">0.042</td>
+                    </tr>
+                    <tr>
+                    <td align="right">42013343190000</td>
+                    <td align="right">-98.44652116</td>
+                    <td align="right">28.95606081</td>
+                    <td>Oil</td>
+                    <td>EOG Resources</td>
+                    <td>EOG Resources</td>
+                    <td>Black Oil</td>
+                    <td>Atascosa</td>
+                    <td>2010-01-12</td>
+                    <td align="right">2249.0</td>
+                    <td align="right">2786.0</td>
+                    <td align="right">510.0</td>
+                    <td align="right">15.0</td>
+                    <td align="right">185.72</td>
+                    <td align="right">3884822.8545508627</td>
+                    <td align="right">22.0</td>
+                    <td align="right">6616557.044128646</td>
+                    <td align="right">571394.653951633</td>
+                    <td align="right">262710.1934679631</td>
+                    <td align="right">623498.452754924</td>
+                    <td align="right">516538.8534031414</td>
+                    <td align="right">1532267.7980553478</td>
+                    <td align="right">3110147.102218898</td>
+                    <td align="right">4481.0</td>
+                    <td align="right">7670.0</td>
+                    <td align="right">0.0</td>
+                    <td align="right">19.0</td>
+                    <td align="right">7673.0</td>
+                    <td align="right">32.9</td>
+                    <td align="right">0.0</td>
+                    <td align="right">32.9</td>
+                    <td align="right">0.043</td>
+                    <td align="right">0.002</td>
+                    <td align="right">0.043</td>
+                    </tr>
+                    <tr>
+                    <td align="right">42013343210000</td>
+                    <td align="right">-98.27171941</td>
+                    <td align="right">28.69575355</td>
+                    <td>Oil</td>
+                    <td>Pioneer Natural Resources</td>
+                    <td>Pioneer Natural Resources</td>
+                    <td>Karnes Trough</td>
+                    <td>Atascosa</td>
+                    <td>2011-01-02</td>
+                    <td align="right">3270.0</td>
+                    <td align="right">4894.0</td>
+                    <td align="right">1543.0</td>
+                    <td align="right">26.0</td>
+                    <td align="right">188.24</td>
+                    <td align="right">3440131.436915134</td>
+                    <td align="right">45.067479279794256</td>
+                    <td align="right">7205512.000285551</td>
+                    <td align="right">649498.1319246145</td>
+                    <td align="right">312655.5982295831</td>
+                    <td align="right">570710.5422615649</td>
+                    <td align="right">536350.4368932039</td>
+                    <td align="right">1613376.3583666477</td>
+                    <td align="right">3522920.9440319818</td>
+                    <td align="right">37761.0</td>
+                    <td align="right">62037.0</td>
+                    <td align="right">16765.0</td>
+                    <td align="right">17677.0</td>
+                    <td align="right">65148.0</td>
+                    <td align="right">425.77</td>
+                    <td align="right">0.19</td>
+                    <td align="right">458.45</td>
+                    <td align="right">0.208</td>
+                    <td align="right">0.032</td>
+                    <td align="right">0.214</td>
+                    </tr>
+                    <tr>
+                    <td align="right">42013343220000</td>
+                    <td align="right">-98.29521949</td>
+                    <td align="right">28.69697774</td>
+                    <td>Oil</td>
+                    <td>Pioneer Natural Resources</td>
+                    <td>Pioneer Natural Resources</td>
+                    <td>Karnes Trough</td>
+                    <td>Atascosa</td>
+                    <td>2011-01-01</td>
+                    <td align="right">3352.0</td>
+                    <td align="right">4761.0</td>
+                    <td align="right">1338.0</td>
+                    <td align="right">30.0</td>
+                    <td align="right">158.7</td>
+                    <td align="right">3440131.436915134</td>
+                    <td align="right">44.0</td>
+                    <td align="right">7205512.000285551</td>
+                    <td align="right">649498.1319246145</td>
+                    <td align="right">312655.5982295831</td>
+                    <td align="right">570710.5422615649</td>
+                    <td align="right">536350.4368932039</td>
+                    <td align="right">1613376.3583666477</td>
+                    <td align="right">3522920.9440319818</td>
+                    <td align="right">29500.0</td>
+                    <td align="right">42811.0</td>
+                    <td align="right">7267.0</td>
+                    <td align="right">9906.0</td>
+                    <td align="right">44554.0</td>
+                    <td align="right">386.03</td>
+                    <td align="right">0.16</td>
+                    <td align="right">398.02</td>
+                    <td align="right">0.186</td>
+                    <td align="right">0.086</td>
+                    <td align="right">0.201</td>
+                    </tr>
+                    <tr>
+                    <td align="right">42013343230000</td>
+                    <td align="right">-98.2811056</td>
+                    <td align="right">28.72031385</td>
+                    <td>Oil</td>
+                    <td>Pioneer Natural Resources</td>
+                    <td>Pioneer Natural Resources</td>
+                    <td>Karnes Trough</td>
+                    <td>Atascosa</td>
+                    <td>2011-01-02</td>
+                    <td align="right">3277.0</td>
+                    <td align="right">4365.0</td>
+                    <td align="right">1034.0</td>
+                    <td align="right">34.0</td>
+                    <td align="right">128.39</td>
+                    <td align="right">3440131.436915134</td>
+                    <td align="right">42.1</td>
+                    <td align="right">7205512.000285551</td>
+                    <td align="right">649498.1319246145</td>
+                    <td align="right">312655.5982295831</td>
+                    <td align="right">570710.5422615649</td>
+                    <td align="right">536350.4368932039</td>
+                    <td align="right">1613376.3583666477</td>
+                    <td align="right">3522920.9440319818</td>
+                    <td align="right">38706.0</td>
+                    <td align="right">64847.0</td>
+                    <td align="right">13701.0</td>
+                    <td align="right">22823.0</td>
+                    <td align="right">68864.0</td>
+                    <td align="right">371.73</td>
+                    <td align="right">0.13</td>
+                    <td align="right">393.75</td>
+                    <td align="right">0.226</td>
+                    <td align="right">0.178</td>
+                    <td align="right">0.258</td>
+                    </tr>
+                    <tr>
+                    <td align="right">42013343260000</td>
+                    <td align="right">-98.21569541</td>
+                    <td align="right">28.84390136</td>
+                    <td>Oil</td>
+                    <td>EOG Resources</td>
+                    <td>EOG Resources</td>
+                    <td>Black Oil</td>
+                    <td>Atascosa</td>
+                    <td>2011-01-02</td>
+                    <td align="right">3529.0</td>
+                    <td align="right">5370.0</td>
+                    <td align="right">1748.0</td>
+                    <td align="right">37.0</td>
+                    <td align="right">145.13</td>
+                    <td align="right">1888211.0</td>
+                    <td align="right">45.0</td>
+                    <td align="right">6616557.044128646</td>
+                    <td align="right">571394.653951633</td>
+                    <td align="right">262710.1934679631</td>
+                    <td align="right">623498.452754924</td>
+                    <td align="right">516538.8534031414</td>
+                    <td align="right">1532267.7980553478</td>
+                    <td align="right">3110147.102218898</td>
+                    <td align="right">53272.0</td>
+                    <td align="right">77447.0</td>
+                    <td align="right">9897.0</td>
+                    <td align="right">32999.0</td>
+                    <td align="right">83255.0</td>
+                    <td align="right">402.32</td>
+                    <td align="right">0.24</td>
+                    <td align="right">402.32</td>
+                    <td align="right">0.243</td>
+                    <td align="right">0.199</td>
+                    <td align="right">0.278</td>
+                    </tr>
+                    <tr>
+                    <td align="right">42013343290000</td>
+                    <td align="right">-98.52283816</td>
+                    <td align="right">28.92214401</td>
+                    <td>Oil</td>
+                    <td>Abraxas</td>
+                    <td>Abraxas</td>
+                    <td>Black Oil</td>
+                    <td>Atascosa</td>
+                    <td>2012-01-01</td>
+                    <td align="right">2332.0</td>
+                    <td align="right">4008.0</td>
+                    <td align="right">1593.0</td>
+                    <td align="right">43.0</td>
+                    <td align="right">93.21</td>
+                    <td align="right">3884822.8545508627</td>
+                    <td align="right">33.7</td>
+                    <td align="right">7397396.0</td>
+                    <td align="right">1013114.0</td>
+                    <td align="right">260288.0</td>
+                    <td align="right">455798.0</td>
+                    <td align="right">310480.0</td>
+                    <td align="right">900548.0</td>
+                    <td align="right">4457168.0</td>
+                    <td align="right">9804.0</td>
+                    <td align="right">18366.0</td>
+                    <td align="right">11263.0</td>
+                    <td align="right">14042.0</td>
+                    <td align="right">20837.0</td>
+                    <td align="right">99.74</td>
+                    <td align="right">0.07</td>
+                    <td align="right">109.08</td>
+                    <td align="right">0.113</td>
+                    <td align="right">0.069</td>
+                    <td align="right">0.125</td>
+                    </tr>
+                    <tr>
+                    <td align="right">42013343320000</td>
+                    <td align="right">-98.54172385</td>
+                    <td align="right">28.75959622</td>
+                    <td>Oil</td>
+                    <td>Atlas Eagle Ford Operating</td>
+                    <td>Cinco Resources</td>
+                    <td>Black Oil</td>
+                    <td>Atascosa</td>
+                    <td>2011-01-04</td>
+                    <td align="right">2657.0</td>
+                    <td align="right">4069.0</td>
+                    <td align="right">1341.0</td>
+                    <td align="right">31.0</td>
+                    <td align="right">131.27</td>
+                    <td align="right">3884822.8545508627</td>
+                    <td align="right">36.67</td>
+                    <td align="right">7046343.0</td>
+                    <td align="right">730384.0</td>
+                    <td align="right">267167.0</td>
+                    <td align="right">544360.0</td>
+                    <td align="right">249936.0</td>
+                    <td align="right">1126724.0</td>
+                    <td align="right">4127771.0</td>
+                    <td align="right">27723.0</td>
+                    <td align="right">43345.0</td>
+                    <td align="right">28531.0</td>
+                    <td align="right">48189.0</td>
+                    <td align="right">51826.0</td>
+                    <td align="right">194.84</td>
+                    <td align="right">0.2</td>
+                    <td align="right">228.99</td>
+                    <td align="right">0.153</td>
+                    <td align="right">0.153</td>
+                    <td align="right">0.182</td>
+                    </tr>
+                    <tr>
+                    <td align="right">42013343330000</td>
+                    <td align="right">-98.21190636</td>
+                    <td align="right">28.8464856</td>
+                    <td>Oil</td>
+                    <td>EOG Resources</td>
+                    <td>EOG Resources</td>
+                    <td>Black Oil</td>
+                    <td>Atascosa</td>
+                    <td>2011-01-04</td>
+                    <td align="right">3064.0</td>
+                    <td align="right">5022.0</td>
+                    <td align="right">1860.0</td>
+                    <td align="right">24.0</td>
+                    <td align="right">209.26</td>
+                    <td align="right">1965132.0</td>
+                    <td align="right">40.0</td>
+                    <td align="right">6313942.0</td>
+                    <td align="right">565459.0</td>
+                    <td align="right">349871.0</td>
+                    <td align="right">507987.0</td>
+                    <td align="right">237490.0</td>
+                    <td align="right">869279.0</td>
+                    <td align="right">3783856.0</td>
+                    <td align="right">40257.0</td>
+                    <td align="right">60085.0</td>
+                    <td align="right">17280.0</td>
+                    <td align="right">41948.0</td>
+                    <td align="right">67468.0</td>
+                    <td align="right">312.66</td>
+                    <td align="right">0.24</td>
+                    <td align="right">312.66</td>
+                    <td align="right">0.188</td>
+                    <td align="right">0.199</td>
+                    <td align="right">0.22</td>
+                    </tr>
+                    <tr>
+                    <td align="right">42013343340000</td>
+                    <td align="right">-98.75015146</td>
+                    <td align="right">28.77117727</td>
+                    <td>Oil</td>
+                    <td>Cabot Oil &amp; Gas</td>
+                    <td>EP Energy</td>
+                    <td>Black Oil</td>
+                    <td>Atascosa</td>
+                    <td>2011-01-04</td>
+                    <td align="right">2377.0</td>
+                    <td align="right">3888.0</td>
+                    <td align="right">1436.0</td>
+                    <td align="right">23.0</td>
+                    <td align="right">169.06</td>
+                    <td align="right">3884822.8545508627</td>
+                    <td align="right">35.6</td>
+                    <td align="right">5512727.0</td>
+                    <td align="right">541898.0</td>
+                    <td align="right">257138.0</td>
+                    <td align="right">427608.0</td>
+                    <td align="right">258761.0</td>
+                    <td align="right">307800.0</td>
+                    <td align="right">3719521.0</td>
+                    <td align="right">6217.0</td>
+                    <td align="right">18506.0</td>
+                    <td align="right">3684.0</td>
+                    <td align="right">10035.0</td>
+                    <td align="right">20272.0</td>
+                    <td align="right">148.03</td>
+                    <td align="right">0.08</td>
+                    <td align="right">159.6</td>
+                    <td align="right">0.143</td>
+                    <td align="right">0.125</td>
+                    <td align="right">0.165</td>
+                    </tr>
+                    <tr>
+                    <td align="right">42013343350000</td>
+                    <td align="right">-98.22239449</td>
+                    <td align="right">28.84714996</td>
+                    <td>Oil</td>
+                    <td>EOG Resources</td>
+                    <td>EOG Resources</td>
+                    <td>Black Oil</td>
+                    <td>Atascosa</td>
+                    <td>2011-01-04</td>
+                    <td align="right">3050.0</td>
+                    <td align="right">4432.0</td>
+                    <td align="right">1313.0</td>
+                    <td align="right">24.0</td>
+                    <td align="right">184.66</td>
+                    <td align="right">3884822.8545508627</td>
+                    <td align="right">37.0</td>
+                    <td align="right">5065798.0</td>
+                    <td align="right">565459.0</td>
+                    <td align="right">325395.0</td>
+                    <td align="right">298079.0</td>
+                    <td align="right">272993.0</td>
+                    <td align="right">465591.0</td>
+                    <td align="right">3138280.0</td>
+                    <td align="right">15684.0</td>
+                    <td align="right">24856.0</td>
+                    <td align="right">9010.0</td>
+                    <td align="right">19657.0</td>
+                    <td align="right">28316.0</td>
+                    <td align="right">164.5</td>
+                    <td align="right">0.15</td>
+                    <td align="right">164.5</td>
+                    <td align="right">0.087</td>
+                    <td align="right">0.087</td>
+                    <td align="right">0.102</td>
+                    </tr>
+                    <tr>
+                    <td align="right">42013343380000</td>
+                    <td align="right">-98.12157587</td>
+                    <td align="right">28.80386428</td>
+                    <td>Oil</td>
+                    <td>Marathon Oil</td>
+                    <td>Marathon Oil</td>
+                    <td>Karnes Trough</td>
+                    <td>Atascosa</td>
+                    <td>2011-01-05</td>
+                    <td align="right">3301.0</td>
+                    <td align="right">4725.0</td>
+                    <td align="right">1353.0</td>
+                    <td align="right">21.719778188539742</td>
+                    <td align="right">287.05575768803243</td>
+                    <td align="right">3440131.436915134</td>
+                    <td align="right">47.8</td>
+                    <td align="right">8092388.0</td>
+                    <td align="right">1013114.0</td>
+                    <td align="right">296668.0</td>
+                    <td align="right">515505.0</td>
+                    <td align="right">188785.0</td>
+                    <td align="right">1263389.0</td>
+                    <td align="right">4814927.0</td>
+                    <td align="right">55353.0</td>
+                    <td align="right">73723.0</td>
+                    <td align="right">72320.0</td>
+                    <td align="right">109435.0</td>
+                    <td align="right">92984.0</td>
+                    <td align="right">459.93</td>
+                    <td align="right">0.56</td>
+                    <td align="right">544.37</td>
+                    <td align="right">0.15</td>
+                    <td align="right">0.218</td>
+                    <td align="right">0.188</td>
+                    </tr>
+                    <tr>
+                    <td align="right">42013343390000</td>
+                    <td align="right">-98.12148464</td>
+                    <td align="right">28.80394355</td>
+                    <td>Oil</td>
+                    <td>Marathon Oil</td>
+                    <td>Hilcorp Energy</td>
+                    <td>Karnes Trough</td>
+                    <td>Atascosa</td>
+                    <td>2011-01-05</td>
+                    <td align="right">3301.0</td>
+                    <td align="right">4645.0</td>
+                    <td align="right">1277.0</td>
+                    <td align="right">21.719778188539742</td>
+                    <td align="right">287.05575768803243</td>
+                    <td align="right">3440131.436915134</td>
+                    <td align="right">47.8</td>
+                    <td align="right">7704731.0</td>
+                    <td align="right">989553.0</td>
+                    <td align="right">293441.0</td>
+                    <td align="right">486466.0</td>
+                    <td align="right">178150.0</td>
+                    <td align="right">1177995.0</td>
+                    <td align="right">4579127.0</td>
+                    <td align="right">54918.0</td>
+                    <td align="right">74531.0</td>
+                    <td align="right">62411.0</td>
+                    <td align="right">89968.0</td>
+                    <td align="right">90365.0</td>
+                    <td align="right">1232.46</td>
+                    <td align="right">1.39</td>
+                    <td align="right">1476.41</td>
+                    <td align="right">0.469</td>
+                    <td align="right">1.273</td>
+                    <td align="right">0.694</td>
+                    </tr>
+                    <tr>
+                    <td align="right">42013343400000</td>
+                    <td align="right">-98.29833629</td>
+                    <td align="right">28.68498173</td>
+                    <td>Oil</td>
+                    <td>Teal Operating</td>
+                    <td>Cinco Resources</td>
+                    <td>Karnes Trough</td>
+                    <td>Atascosa</td>
+                    <td>2011-01-09</td>
+                    <td align="right">3390.0</td>
+                    <td align="right">4543.0</td>
+                    <td align="right">1095.0</td>
+                    <td align="right">44.0</td>
+                    <td align="right">103.24</td>
+                    <td align="right">3440131.436915134</td>
+                    <td align="right">44.12</td>
+                    <td align="right">6903270.0</td>
+                    <td align="right">1036675.0</td>
+                    <td align="right">355342.0</td>
+                    <td align="right">313432.0</td>
+                    <td align="right">213503.0</td>
+                    <td align="right">753435.0</td>
+                    <td align="right">4230882.0</td>
+                    <td align="right">25599.0</td>
+                    <td align="right">44381.0</td>
+                    <td align="right">26150.0</td>
+                    <td align="right">48017.0</td>
+                    <td align="right">52832.0</td>
+                    <td align="right">259.06</td>
+                    <td align="right">0.66</td>
+                    <td align="right">299.57</td>
+                    <td align="right">0.172</td>
+                    <td align="right">0.195</td>
+                    <td align="right">0.206</td>
+                </tr>
+         </table>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+</body>
+</html>
+                

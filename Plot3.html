@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>EagleFord Analysis</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+  <link rel="stylesheet" href="test.css">
+</head>
+
+
+
+<body>
+    <nav class="navbar navbar-expand-xl navbar-dark bg-dark">
+        <div class="container-fluid">
+            <div class="navbar-header"> 
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                <span class="navbar-toggler-icon"></span>
+                </button>
+                <a class="navbar-brand" href="landing.html">Eagle Ford Project</a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbarColor02">
+                <ul class="nav navbar-nav navbar-right">
+                    <li class="active"><a href="data.html">Data<span class="sr-only">(current)</span></a></li>
+                    <li class="dropdown">
+                    <a href="Plot1.html" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Plots<span class="caret"></span></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="Plot1.html">Activity By Sub-Play</a></li>
+                        <li><a href="Plot2.html">Production By Year</a></li>
+                        <li><a href="Plot3.html">Average Recovery</a></li>
+                        <li><a href="Plot4.html">Cost Breakdown</a></li>
+                    </ul>
+                    <li><a href="Comparison.html">Comparison</a></li>
+                </ul>
+                <form class="navbar-form navbar-left" action="/action_page.php">
+                    <div class="form-group">
+                        <input type="text" class="form-control" placeholder="Search">
+                    </div>
+                    <button type="submit" class="btn btn-default">Submit</button>
+                </form>
+            </div>
+        </div>
+    </nav>  
+    <div class = "container-fluid">
+            <div class = "row align-items-start">
+              <div class = "col-sm-8">
+                <div class = "container sub">
+                  <div class = "row align-items-center">
+                    <div class = "col-sm-8">
+                      <h2>Average Estimated Recovery By Sub-Play</h2>
+                    </div>
+                  </div>
+      
+                  <div class="row">
+                      <div class="container-fluid">
+                          <div class="col-md-6">
+                              <img class = "img-fluid floater" width="500" height = "350" src="AvgBOE.png" alt="AvgBOE">
+                          </div>
+                          <div class="column=md-6">
+                              <p> This chart visualizes estimated ultimate recovery (EUR) for each sub-play in Eagle Ford.
+                                    (EUR) is a production term commonly used in the oil and gas industry and is a metric
+                                    used for approximation of the quantity of oil or gas that is potentially recoverable or 
+                                    has already been recovered from a reserve or well. It is of the utmost importance that 
+                                    drilling projects meet an acceptable EUR threshold for a project to be considered viable 
+                                    and profitable. Here we see that Southeast Gas, Southwest Gas, and Maverisck Condensate, 
+                                    that have the lowest well count (see <a href="Plot1.html" target="_blank">Activity by Sub-play</a>), have a higher average BOE production.
+                                    This, in turn, is indicative of a bigger production potential in these sub-plays. However, 
+                                    further analysis is required for a more accurate valuation of the potential oil reserves.
+                              </p>
+                          </div>
+                      </div>
+
+                    <div class = "col-sm-4">
+                        <div class = "container sub">
+                            <div class = "row align-items-center">
+                                <div class = "col-sm-12">
+                                    <h2>All Visualizations</h2>
+                                </div>
+                            </div>
+                            <div class = "row align-items-center">
+                                <div class = "col-sm-6 pict">
+                                    <a target = "_blank" href="Plot2.html">
+                                    <img class = "img-fluid" width="300" height = "200" src="ProdByYear.png" alt="ProdByYear">
+                                    </a>
+                        </div>
+                        <div class = "col-sm-6 pict">
+                            <a target="_blank" href="Plot3.html">
+                            <img class = "img-fluid" width="300" height = "180"src="AvgBOE.png" alt="AvgBoe">
+                            </a>
+                        </div>
+                        </div>
+                        <div class = "row align-items-center">
+                        <div class = "col-sm-6 pict">
+                            <a target="_blank" href="Plot1.html">
+                            <img class = "img-fluid" width="300" height = "150" src="ActivityBySubPlay.png" alt="Cloudiness">
+                            </a>
+                        </div>
+                        <div class = "col-sm-6 pict">
+                            <a target="_blank" href="Plot4.html">
+                            <img class = "img-fluid" width="300" height = "150" src="CostBreakdown.png" alt="CostBreakdown">
+                            </a>
+                        </div>
+                        </div>
+                    </div>
+                    </div>
+                </div>
+                </div>
+<div class="footer">
+    <p> &#169;Copyright Coding Bootcamp 2018</p>
+</div>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+</body>
+</html>
