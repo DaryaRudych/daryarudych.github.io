@@ -76,6 +76,9 @@ h2 {
     color: rgb(54, 57, 179);
     font-size: 150%;
 }
+h3 {
+    font-size: 120%;
+}
 .page-header {
     margin: 6px;
     padding: 6px;
